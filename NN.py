@@ -12,6 +12,10 @@
 
 import pandas as pd
 train = pd.read_csv('diabetes.csv')
+train.head() #summary
+train.info() #more info on data type and if columns have missing values
+train.describe() #find mean, std, min, mac, percentile 
+
 train.replace('?', np.nan, inplace = True)
 train = train.astype(float)
 
